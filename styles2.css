@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    max-width: 75vw;
+    padding: 1rem 1rem;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+   
+}
+
+.headtitle {
+   margin-bottom: 2.8rem;
+   
+}
+.headtitle h1{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.headtitle p{
+    max-width: 35rem;
+    text-align: center;
+    margin: 0 auto;
+    color: rgb(101, 98, 98);
+}
+a{
+    text-decoration: none;
+}
+
+.Maincontent_container{
+    display: grid;
+    gap: 1.3rem;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width:650px){
+    .Maincontent_container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (min-width:980px){
+    .Maincontent_container{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (min-width:1080px){
+    .Maincontent_container{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+.Cardcontainer{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(98, 95, 95);
+    border-radius: 4px;
+}
+
+.cardimg_container{
+    position: relative;
+    overflow: hidden;
+    height: 10rem;
+}
+
+.card_img{
+    object-fit: cover;
+    object-position: center;
+    position:absolute;
+    height: 100%;
+    width: 100%;
+}
+.Cardcontainer:hover .card_img{
+    transform: scale(1.1);
+    transition-duration: 200ms;
+}
+.Card_disc{
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem;
+}
+.card_title{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.Card_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0.5rem;
+}
+.footer_left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.Avatar_disc{
+    display: flex;
+    flex-direction: column;
+}
+.card_title:hover{
+    color: rgb(0, 0, 255);
+}
+
+.Avatar_name{
+    color: blue;
+}
+
+.footer_right{
+    border: 1px solid rgb(160, 157, 157);
+    padding: 0.3rem;
+    border-radius: 2px;
+   
+    text-align: center;
+}
+
+.Avatar_conatainer{
+    height: 2.5rem;
+    width: 2.5rem;
+   
+    overflow: hidden;
+    border: 1px solid rgb(105, 103, 103);
+    border-radius: 50%;
+    background-color:rgb(206, 202, 202);
+}
+
+.Avatar_date{
+    display: flex;
+}
+
