@@ -404,7 +404,7 @@
 
 
         if (command === "scroll to pricing") {
-            document.getElementById('a[href="#Pricing"]').scrollIntoView({ behavior: "smooth" });
+            document.querySelector('a[href="#Pricing"]').scrollIntoView({ behavior: "smooth" });
         } else if (command === "startTour") {
             document.querySelector('.Tour-button').click();
         } else if (command === "contactUs") {
