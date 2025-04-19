@@ -395,7 +395,9 @@
         title="NRI Buddy Voice Assistant"
         allow="microphone; autoplay"
         allowfullscreen
-    ></iframe>
+        window.parent.postMessage({ command: "scrollToPricing" }, "*");
+        
+        ></iframe>
 
     <!-- JavaScript -->
     <script>
