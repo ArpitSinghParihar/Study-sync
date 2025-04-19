@@ -403,9 +403,11 @@
         console.log("Received command:", command);
 
 
-        if (command === "scroll to pricing") {
-            document.querySelector('a[href="#Pricing"]').scrollIntoView({ behavior: "smooth" });
-        } else if (command === "startTour") {
+        if (normalizedCommand?.includes("pricing")) {
+    document.querySelector('a[href="#Pricing"]').scrollIntoView({ behavior: "smooth" });
+        }
+
+        else if (command === "startTour") {
             document.querySelector('.Tour-button').click();
         } else if (command === "contactUs") {
             document.querySelector('a[href="#contact"]').scrollIntoView({ behavior: "smooth" });
