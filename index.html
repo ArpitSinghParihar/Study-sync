@@ -18,7 +18,7 @@
             <nav class="Navcontent">
                 <a href="#home">Home</a>
                 <a href="#feature">Feature</a>
-                <a href="#help">Pricing</a>
+                <a href="#pricing">Pricing</a>
                 <a href="Blog.html">Blog</a>
                 <a href="#about">About</a>
                 <!-- <a href="#help">Help</a> -->
@@ -166,7 +166,7 @@
         </div>
      </div>
 
-     <div class="testimonial-container">
+     <div id="#Pricing" class="testimonial-container">
 
         <div class="testimonial-content">
             <h1>
@@ -402,7 +402,29 @@
         function toggleAssistant() {
         const iframe = document.getElementById("assistantFrame");
         iframe.style.display = iframe.style.display === "block" ? "none" : "block";
+    }
+
+        // Voice Assistant functionality
+        
+    // Listen for messages from Lisa (iframe)
+    window.addEventListener("message", function(event) {
+        // Ensure the message comes from your trusted assistant source
+        if (event.origin !== "https://campusbuddy.vercel.app") return;
+
+        const command = event.data.command;
+        console.log("Received command:", command);
+
+        // Example: Respond to commands
+        if (command === "scrollToPricing") {
+            document.querySelector('a[href="#pricing"]').scrollIntoView({ behavior: "smooth" });
+        } else if (command === "startTour") {
+            document.querySelector('.Tour-button').click();
+        } else if (command === "contactUs") {
+            document.querySelector('a[href="#contact"]').scrollIntoView({ behavior: "smooth" });
         }
+    });
+
+
     </script>
 
     </body>
